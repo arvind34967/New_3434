@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guess The Number Game</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#222;
+color:white;
+}
+input,button{
+padding:10px;
+font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Guess The Number (1-10)</h1>
+
+<input type="number" id="guess">
+<button onclick="check()">Check</button>
+
+<p id="result"></p>
+
+<script>
+
+let number = Math.floor(Math.random()*10)+1;
+
+function check(){
+
+let guess = document.getElementById("guess").value;
+
+if(guess == number){
+document.getElementById("result").innerHTML="🎉 You Win!";
+}
+else{
+document.getElementById("result").innerHTML="❌ Try Again";
+}
+
+}
+
+</script>
+
+</body>
+</html>

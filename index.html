@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>University System</title>
+</head>
+
+<body>
+
+<h1>University Management System</h1>
+
+<h2>Add Student</h2>
+
+<input type="text" placeholder="Student Name" id="name">
+<input type="text" placeholder="Course" id="course">
+
+<button onclick="addStudent()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+
+function addStudent(){
+
+let name = document.getElementById("name").value;
+let course = document.getElementById("course").value;
+
+let li = document.createElement("li");
+
+li.innerHTML = name + " - " + course;
+
+document.getElementById("list").appendChild(li);
+
+}
+
+</script>
+
+</body>
+</html>
